@@ -8,16 +8,8 @@
 
 #import "___PACKAGENAME___.h"
 
-@interface ___PACKAGENAME___()
-
-@end
-
-
 @implementation ___PACKAGENAME___
 
-/**
- * @return the single static instance of the plugin object
- */
 + (instancetype)sharedInstance
 {
     static id plugin = nil;
@@ -28,10 +20,6 @@
     return plugin;
 }
 
-
-/**
- * A special method called by SIMBL once the application has started and all classes are initialized.
- */
 + (void)load
 {
     NSLog(@"___PACKAGENAME___ loaded");
@@ -43,6 +31,8 @@
     }
 }
 @end
+
+//=============================================================================
 
 @implementation NSObject (___PACKAGENAME___)
 - (BOOL)targetMethodHook {
